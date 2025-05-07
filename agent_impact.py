@@ -218,5 +218,5 @@ vertical_output_filename = f"agent_impact_per_vertical_{days_back}_days_back_of_
 vertical_output_path = os.path.join(output_dir, vertical_output_filename)
 grouped_vertical_df.to_csv(vertical_output_path, index=False)
 
-print(f"✅ Account-level KPI report saved: {output_path}")
-print(f"✅ Vertical-level KPI report saved: {vertical_output_path}")
+print(f"✅ Account-level agent report saved: {output_path}")
+print(f"✅ Vertical-level agent report saved: {vertical_output_path}")
