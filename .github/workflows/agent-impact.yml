@@ -1,0 +1,22 @@
+name: Run Agent Impact Script Every Other Monday
+
+on:
+  schedule:
+    - cron: '0 8 * * 1/2'  # Runs every other Monday at 8:00 AM UTC
+
+jobs:
+  run-agent-impact:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+      - name: Run agent_impact.py
+        run: python agent_impact.py
