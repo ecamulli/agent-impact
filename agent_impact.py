@@ -8,14 +8,14 @@ from concurrent.futures import ThreadPoolExecutor
 
 # --- Time configuration ---
 now_local = datetime.now()
-days_back = 30
+days_back = 1
 today_date = now_local.strftime("%Y-%m-%d")
 to_timestamp = int(now_local.timestamp() * 1000)
 from_timestamp = int((now_local - timedelta(days=days_back)).timestamp() * 1000)
 
 # --- Paths ---
-output_dir = r"C:/Python Path/Kpi/History"
-EXCEL_PATH = "C:/Python Path/Customer_Data.xlsx"
+output_dir = r"Output"
+EXCEL_PATH = "Customer_Data.xlsx"
 os.makedirs(output_dir, exist_ok=True)
 
 # --- API URLs ---
