@@ -8,7 +8,7 @@ from concurrent.futures import ThreadPoolExecutor
 
 # --- Time configuration ---
 now_local = datetime.now()
-days_back = 1
+days_back = 30
 today_date = now_local.strftime("%Y-%m-%d")
 to_timestamp = int(now_local.timestamp() * 1000)
 from_timestamp = int((now_local - timedelta(days=days_back)).timestamp() * 1000)
