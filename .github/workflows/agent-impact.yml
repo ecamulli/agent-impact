@@ -1,8 +1,8 @@
-name: Run Agent Impact Script Every Other Monday
+name: Run Agent Impact Script Every Monday
 
 on:
   schedule:
-    - cron: '0 8 * * 1/2'  # Runs every other Monday at 8:00 AM UTC
+    - cron: '0 8 * * 1'  # Runs every Monday at 8:00 AM UTC
 
 jobs:
   run-agent-impact:
